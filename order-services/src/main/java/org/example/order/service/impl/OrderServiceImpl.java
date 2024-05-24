@@ -26,7 +26,7 @@ public class OrderServiceImpl implements OrderService {
     public Order queryOrder(JSONObject jsonObject) {
         Order order = new Order();
         order.setOrderId(UUID.randomUUID().toString());
-        order.setUser(restTemplate.postForObject(serviceProperties.getUser(), jsonObject, User.class));
+        order.setUser(restTemplate.postForObject(serviceProperties.getUserQuery(), jsonObject, User.class));
         return order;
     }
 }
