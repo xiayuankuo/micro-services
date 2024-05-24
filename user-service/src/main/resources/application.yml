@@ -1,0 +1,19 @@
+server:
+  port: 8096
+
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/test
+    username: root
+    password: test
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+service:
+  name:
+    order: order-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8088/eureka/
