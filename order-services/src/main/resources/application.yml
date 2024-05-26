@@ -1,18 +1,22 @@
 server:
-  port: 8086
+  port: 8085
 spring:
   application:
     name: order-service
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/test
+    url: jdbc:mysql://192.168.18.189:3306/test
     username: root
     password: test
     driver-class-name: com.mysql.cj.jdbc.Driver
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:8088/eureka/
+  cloud:
+    nacos:
+      server-addr: 192.168.18.189:8848
+      discovery:
+        cluster-name: FG  #配置服务所在集群名称    异地多活
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:8088/eureka/
 
 service:
   name:

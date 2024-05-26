@@ -5,15 +5,17 @@ spring:
   application:
     name: user-service
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/test
+    url: jdbc:mysql://192.168.18.189:3306/test
     username: root
     password: test
     driver-class-name: com.mysql.cj.jdbc.Driver
-
+  cloud:
+    nacos:
+      server-addr: 12192.168.18.189:8848
 service:
   name:
     order: order-service
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:8088/eureka/
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://127.0.0.1:8088/eureka/
