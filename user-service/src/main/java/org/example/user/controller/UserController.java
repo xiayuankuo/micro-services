@@ -3,10 +3,7 @@ package org.example.user.controller;
 import com.alibaba.fastjson.JSONObject;
 import org.example.user.dto.User;
 import org.example.user.service.UserService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -23,5 +20,11 @@ public class UserController {
     @PostMapping("queryUser")
     public User queryUser(@RequestBody JSONObject jsonObject){
         return userService.queryUser(jsonObject);
+    }
+
+    @GetMapping("getMatrix/{user}/{order}")
+    public String getMatrix(@MatrixVariable(value = "id", pathVar = "user") String userId,
+                            @MatrixVariable(value = "id", pathVar = "order") String orderId){
+        return userId + " **** " + orderId;
     }
 }
