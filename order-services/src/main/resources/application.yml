@@ -4,7 +4,7 @@ spring:
   application:
     name: order-service
   datasource:
-    url: jdbc:mysql://192.168.18.189:3306/test
+    url: jdbc:mysql://127.0.0.1:3306/test
     username: root
     password: test
     driver-class-name: com.mysql.cj.jdbc.Driver
