@@ -24,4 +24,9 @@ public class OrderController {
         jsonObject.put("userId", userId);
         return orderService.queryOrder(jsonObject);
     }
+
+    @GetMapping("testAnnotation")
+    public String testAnnotation(){
+        return orderService.testAnnotation();
+    }
 }

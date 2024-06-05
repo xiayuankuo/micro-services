@@ -11,7 +11,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   cloud:
     nacos:
-      server-addr: 192.168.5.74:8848
+      server-addr: 127.0.0.1:8848
 service:
   name:
     order: order-service

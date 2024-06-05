@@ -10,9 +10,10 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   cloud:
     nacos:
-      server-addr: 192.168.18.189:8848
+      server-addr: 127.0.0.1:8848
       discovery:
         cluster-name: FG  #配置服务所在集群名称    异地多活
+
 #eureka:
 #  client:
 #    service-url:
@@ -20,8 +21,18 @@ spring:
 
 service:
   name:
-    user: http://user-service/user/queryUser
+    user: http://user-service/user/queryUser   #ribbon使用    feign不再需要
 
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
+feign:   #feign底层是ribbon实现
+  client:
+#    config:
+#      default:  #可指定服务，仅对某个服务生效   feign的日志级别
+#        loggerlevel: FULL
+  httpclient:
+    enabled: true
+    max-connections: 200
+    max-connections-per-route: 50
+    disable-ssl-validation: false

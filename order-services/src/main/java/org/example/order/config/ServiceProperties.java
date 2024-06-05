@@ -12,5 +12,5 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "service.name")
 @Data
 public class ServiceProperties {
-    private String userQuery;
+    private String user;
 }

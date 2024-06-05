@@ -12,19 +12,23 @@ import javax.annotation.Resource;
  * @Date 2024/5/24
  */
 @RestController
-@RequestMapping("/user")
 public class UserController {
     @Resource
     private UserService userService;
 
-    @PostMapping("queryUser")
+    @PostMapping("/user/queryUser")
     public User queryUser(@RequestBody JSONObject jsonObject){
         return userService.queryUser(jsonObject);
     }
 
-    @GetMapping("getMatrix/{user}/{order}")
+    @GetMapping("/user/getMatrix/{user}/{order}")
     public String getMatrix(@MatrixVariable(value = "id", pathVar = "user") String userId,
                             @MatrixVariable(value = "id", pathVar = "order") String orderId){
         return userId + " **** " + orderId;
+    }
+
+    @PostMapping("/user/userToString")
+    public String userToString(User user){
+        return user.toString();
     }
 }

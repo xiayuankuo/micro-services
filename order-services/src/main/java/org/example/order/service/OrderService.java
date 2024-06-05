@@ -10,4 +10,6 @@ import org.example.order.dto.Order;
 public interface OrderService {
 
     Order queryOrder(JSONObject jsonObject);
+
+    String testAnnotation();
 }
