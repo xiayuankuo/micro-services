@@ -18,3 +18,18 @@ spring:
             - Path=/order/**
       default-filters:
         -
+      globalcors:
+        add-to-simple-url-handler-mapping: true  #cors方案，由浏览器询问服务器是否允许跨域 放行本次options询问请求
+        cors-configurations:
+          '[/**]':  #拦截一切请求 进行跨域处理
+            allowedOrigins:
+              - "http://localhost:8090"
+            allowedMethods:
+              - "GET"
+              - "POST"
+              - "OPTIONS"
+              - "DELETE"
+              - "PUT"
+            allowedHeaders: "*"
+            allowedCredentials: true # 跨域是否允许携带cookie
+            maxAge: 360000 #跨域有效期  毫秒  避免频繁请求浪费性能

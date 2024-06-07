@@ -27,7 +27,7 @@ mybatis:
   configuration:
     map-underscore-to-camel-case: true
 feign:   #feign底层是ribbon实现
-  client:
+#  client:
 #    config:
 #      default:  #可指定服务，仅对某个服务生效   feign的日志级别
 #        loggerlevel: FULL
