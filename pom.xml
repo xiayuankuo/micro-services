@@ -19,12 +19,14 @@
         <module>user-service</module>
         <module>eureka-server</module>
         <module>gateway</module>
+        <module>commodity-service</module>
     </modules>
     <properties>
         <spring-cloud.version>Hoxton.SR10</spring-cloud.version>
         <spring-boot-version>2.3.9.RELEASE</spring-boot-version>
         <mybatis.spring.version>2.1.1</mybatis.spring.version>
         <mysql.version>8.0.27</mysql.version>
+        <elasticsearch.version>7.17.21</elasticsearch.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -78,6 +80,7 @@
                 <artifactId>lombok</artifactId>
                 <version>1.18.20</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
     <build>
