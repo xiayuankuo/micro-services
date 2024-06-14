@@ -10,4 +10,6 @@ import org.example.user.dto.User;
 public interface UserService {
 
     User queryUser(JSONObject jsonObject);
+
+    String trace(String trace);
 }

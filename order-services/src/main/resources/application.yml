@@ -13,7 +13,9 @@ spring:
       server-addr: 127.0.0.1:8848
       discovery:
         cluster-name: FG  #配置服务所在集群名称    异地多活
-
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8080   #集成客户端
 #eureka:
 #  client:
 #    service-url:

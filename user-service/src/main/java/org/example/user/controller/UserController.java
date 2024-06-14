@@ -31,4 +31,14 @@ public class UserController {
     public String userToString(User user){
         return user.toString();
     }
+
+    @GetMapping("/user/traceA")
+    public String sentinelTraceA(){
+        return userService.trace("a");
+    }
+
+    @GetMapping("/user/traceB")
+    public String sentinelTraceB(){
+        return userService.trace("b");
+    }
 }

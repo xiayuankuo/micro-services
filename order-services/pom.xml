@@ -23,6 +23,13 @@
         <!--        </dependency>-->
 
         <!-- feign 覆盖默认httpclient， 默认用的URLConnection -->
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
+
+
         <dependency>
             <groupId>io.github.openfeign</groupId>
             <artifactId>feign-httpclient</artifactId>

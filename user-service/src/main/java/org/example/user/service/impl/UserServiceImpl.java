@@ -1,5 +1,6 @@
 package org.example.user.service.impl;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.fastjson.JSONObject;
 import org.example.user.dto.User;
 import org.example.user.service.UserService;
@@ -21,5 +22,11 @@ public class UserServiceImpl implements UserService {
         user.setUserId(jsonObject.getString("userId"));
         user.setUserName(String.valueOf(new Random().nextInt(10)));
         return user;
+    }
+
+    @Override
+    @SentinelResource
+    public String trace(String trace) {
+        return trace;
     }
 }
